@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.24)
+
 project(
         cpp_algorithms
         LANGUAGES C CXX
@@ -10,9 +11,9 @@ find_library(MATH_LIBRARY m)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+include_directories(./include)
 
-add_executable(cpp_algorithms main.cpp)
-add_subdirectory(leetcode)
+add_subdirectory(arrays)
 
 cmake_policy(SET CMP0054 NEW)
 cmake_policy(SET CMP0057 NEW)
